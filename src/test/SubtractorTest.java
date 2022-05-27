@@ -1,9 +1,9 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.gen5.api.Assertions;
+import org.junit.gen5.api.BeforeEach;
+import org.junit.gen5.api.Test;
 import org.mockito.Mockito;
 
 import core.IAdder;
@@ -16,7 +16,7 @@ public class SubtractorTest {
 	private IFlipper flipper;
 	private Subtractor subtractor;
 	
-	@Before
+	@BeforeEach
 	public void setUp() {
 		adder = Mockito.mock(IAdder.class);
 		flipper = Mockito.mock(IFlipper.class);
@@ -28,6 +28,6 @@ public class SubtractorTest {
 	
 	@Test
 	public void subtractTest() {
-		assertEquals(-2, subtractor.subtract(3, 5));
+		Assertions.assertEquals(-2, subtractor.subtract(3, 5));
 	}
 }

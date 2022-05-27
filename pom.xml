@@ -18,9 +18,14 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>4.5.1</version>
-			<type>pom.sha512</type>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>junit5-api</artifactId>
+			<version>5.0.0-ALPHA</version>
 		</dependency>
 	</dependencies>
 </project>
