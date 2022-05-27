@@ -1,0 +1,4 @@
+core\Subtractor.class
+core\IFlipper.class
+test\SubtractorTest.class
+core\IAdder.class
