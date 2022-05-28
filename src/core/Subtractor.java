@@ -1,6 +1,6 @@
 package core;
 
-public class Subtractor {
+public class Subtractor implements ISubtractor {
 	private IAdder adder;
 	private IFlipper flipper;
 	

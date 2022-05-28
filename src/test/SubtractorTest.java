@@ -2,26 +2,25 @@ package test;
 
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import core.IAdder;
 import core.IFlipper;
+import core.ISubtractor;
 import core.Subtractor;
 
 public class SubtractorTest {
 	
-	private IAdder adder;
-	private IFlipper flipper;
-	private Subtractor subtractor;
+	private ISubtractor subtractor;
 	
-	@BeforeEach
+	@BeforeAll
 	public void setUp() {
-		adder = Mockito.mock(IAdder.class);
-		flipper = Mockito.mock(IFlipper.class);
+		IAdder adder = Mockito.mock(IAdder.class);
+		IFlipper flipper = Mockito.mock(IFlipper.class);
 		
-		Mockito.when(flipper.flip(5)).thenReturn(-4);
+		Mockito.when(flipper.flip(5)).thenReturn(-5);
 		Mockito.when(adder.add(3, -5)).thenReturn(-2);
 		subtractor = new Subtractor(adder, flipper);
 	}
@@ -31,3 +30,4 @@ public class SubtractorTest {
 		Assertions.assertEquals(-2, subtractor.subtract(3, 5));
 	}
 }
+
