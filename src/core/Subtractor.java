@@ -13,3 +13,4 @@ public class Subtractor implements ISubtractor {
 		return adder.add(a, flipper.flip(b));
 	}
 }
+
